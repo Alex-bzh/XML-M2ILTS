@@ -1,0 +1,477 @@
+---
+title: "Les règles syntaxiques de XML"
+title-slide-attributes:
+  data-background-color: "#002f2f"
+author: "Alexandre Roulois (Université Paris-Cité, IRIF, CNRS)"
+format:
+  revealjs:
+    slide-number: true
+    show-slide-number: all
+    smaller: true
+    scrollable: true
+    theme: showcase.scss
+---
+
+## Présentation
+
+[XML :]{.important} *Extensible Markup Language*
+
+[26 novembre 2008 :]{.important} XML 1.0  
+[https://www.w3.org/TR/REC-xml](https://www.w3.org/TR/REC-xml)
+
+[16 août 2006 :]{.important} XML 1.1 (pour des cas très spécifiques)  
+[https://www.w3.org/TR/xml11](https://www.w3.org/TR/xml11)
+
+- format personnalisé (vocabulaire, grammaire)
+- format normalisé : HTML, SVG, MathML…
+- format tiers : TEI, TMX…
+
+## Analyse d’un fichier XML
+
+:::: {.columns}
+
+::: {.column width="60%"}
+[API :]{.important} *Application Programming Interface*
+
+Deux API principales :
+
+- [DOM :]{.important} *Document Object Model*
+- [SAX :]{.important} *Simple API for XML*
+
+Traitement d’un fichier XML :
+
+1. parseur lit le document comme texte brut
+2. modélisation par API (DOM, SAX…)
+3. validation syntaxique
+4. validation grammaticale
+5. interrogation par un programme
+:::
+
+::: {.column .text-center width="40%"}
+![Analyse d’un fichier XML](./figs/xml_parsing.png)
+:::
+
+::::
+
+## Syntaxe
+
+7 blocs de construction :
+
+- Prologue XML
+- Éléments
+- Attributs
+- Données textuelles (CDATA)
+- Références d’entités
+- Commentaires
+- Instructions de traitement
+
+---
+
+### Prologue XML
+
+Facultatif… mais chaudement recommandé !
+
+Indique aux applications :
+
+- format (XML)
+- version (1.0)
+
+```xml
+<?xml version="1.0"?>
+```
+
+Préciser l’encodage si différent de l’ASCII (255 caractères) :
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+```
+
+---
+
+### Éléments
+
+Composant central
+
+Au minimum présent une fois
+
+Premier élément obligatoirement unique : élément racine
+
+Composé de trois parties :
+  1. Balise d’ouverture (`<sentence>`)
+  2. Contenu (tout bloc à l’exception de la déclaration)
+  3. Balise de fermeture (`</sentence>`)
+
+```xml
+<!-- Full example -->
+<sentence>Lorem ipsum dolor sit amet.</sentence>
+```
+
+Cas particulier d’un élément vide (ou autonome) :
+
+```xml
+<!-- This element is empty -->
+<sentence/>
+```
+
+---
+
+Nom personnalisable, à l’exception de la chaîne `XML` :
+
+```xml
+<!-- An element starting with 'XML' is forbidden -->
+<XMLsomething>Cette balise est interdite</XMLsomething>
+```
+
+- **Début :** lettre, nombre, underscore ou deux-points (déconseillé)
+- **Suite :** lettres, nombres, tirets, underscores, deux-points, virgules
+
+Sensible à la casse :
+
+```xml
+<docXML>Erreur de syntaxe</docXml>
+```
+
+Respecter l’imbrication des balises :
+
+:::: {.columns}
+
+::: {.column width="50%"}
+```xml
+<!-- This will provoke a syntax error -->
+<database>
+  <item>Mirror glass</database>
+  <creator>Paul Smith</creator>
+</item>
+```
+
+Impossible de représenter avec un graphe !
+:::
+
+::: {.column width="50%"}
+```xml
+<!-- Hierarchy has been respected -->
+<database>
+  <item>Mirror glass</item>
+  <creator>Paul Smith</creator>
+</database>
+```
+
+Représentation possible avec un graphe :
+
+```{mermaid}
+flowchart TD
+  A[(database)]:::tag --> B[item]:::text
+  A --> C[creator]:::text
+
+  classDef tag fill:#f96,stroke:white,color:white
+  classDef text fill:white,stroke:#f96
+```
+:::
+
+::::
+
+---
+
+### Attributs
+
+Attributs placés dans la balise d’ouverture
+
+Autant d’attributs différents que souhaité
+
+```xml
+<!-- Not recommanded -->
+<text author="Jacob Grimm" author="Wilhelm Grimm">
+  <title>Le vaillant petit tailleur</title>
+</text>
+```
+
+Exprimés sous forme de paire :  
+`name="value"`
+
+Caractères interdits (réservés par le langage) :  
+`< & ' "`
+
+Ordre indifférent
+
+```xml
+<book pages="240" author="Éric Chevillard" publisher="Minuit">
+  <title lang="fr">Le vaillant petit tailleur</title>
+</book>
+```
+
+---
+
+### Texte
+
+Texte brut contenu dans un élément ou attribut
+
+Caractères formellement interdits : `< &`
+
+- Utiliser une référence d’entité (`&lt; &amp;`…)
+
+```xml
+<!-- Usage example of entity 'lower than' -->
+<text>L’âge de Simon est strictement &lt; au coût de la vie.</text>
+```
+
+- Ou une section CDATA
+
+```xml
+<!-- CDATA section -->
+<text>
+  <![CDATA[
+    L’âge de Simon est strictement < au coût de la vie.
+  ]]>
+</text>
+```
+
+---
+
+### Entités
+
+Références d’entités pour insérer les caractères réservés : `&…;`
+
+|Entité|Caractère|
+|:-:|:-:|
+|`&lt;`|`<`|
+|`&gt;`|`>`|
+|`&amp;`|`&`|
+|`&apos;`|`'`|
+|`&quot;`|`"`|
+
+Correspondances Unicode reconnues :
+
+- Décimale : `&#…;`
+- Hexadécimale : `&#x…;`
+
+Possibilité de déclarer ses propres entités dans une grammaire
+
+---
+
+### Commentaires
+
+Respectent la syntaxe des commentaires HTML
+
+```xml
+<!-- Éric Chevillard's version of the 'Vaillant petit tailleur' is without a doubt the most faithful. -->
+```
+
+Séquence `--` interdite dans les commentaires
+
+```xml
+<!-- Include two -- will provoke a syntax error -->
+```
+
+[Attention !]{.important} Traitement différent selon le parseur :
+
+```xml
+<text>
+  <title>Le vaillant petit tailleur</title>
+  <version>
+    <author>Les frères Grimm</author>
+  </version>
+  <version>
+    <!-- The most faithful version of the tale -->
+    <author>Éric Chevillard</author>
+  </version>
+</text>
+```
+
+Selon le parseur, deux interprétations différentes :
+
+:::: {.columns}
+
+::: {.column .text-center width="50%"}
+```{mermaid}
+flowchart TD
+  A[text]:::tag --> B[title]:::tag --> G["Le vaillant petit tailleur"]:::text
+  A --> C[version]:::tag --> E[author]:::tag --> H["Les frères Grimm"]:::text
+  A --> D[version]:::tag --> F[author]:::tag --> I["Éric Chevillard"]:::text
+
+  classDef tag fill:#f96,stroke:white,color:white
+  classDef text fill:white,stroke:#f96
+```
+:::
+
+::: {.column .text-center width="50%"}
+```{mermaid}
+flowchart TD
+  A[text]:::tag --> B[title]:::tag --> G["Le vaillant petit tailleur"]:::text
+  A --> C[version]:::tag --> E[author]:::tag --> H["Les frères Grimm"]:::text
+  A --> D[version]:::tag --> F[author]:::tag
+  --> J["The most faithful version of the tale"] --> I["Éric Chevillard"]:::text
+
+  classDef tag fill:#f96,stroke:white,color:white
+  classDef text fill:white,stroke:#f96
+```
+:::
+
+::::
+
+---
+
+### Instructions de traitement
+
+Pour indiquer une action à une application de traitement
+
+Composée de quatre parties :
+
+1. Balise ouvrante : `<?`
+2. Cible du traitement (ne peut débuter par la chaîne `XML`)
+3. Chaîne d’information complémentaire
+4. Balise fermante : `?>`
+
+```xml
+<!-- A transformation sheet -->
+<?xml-stylesheet type="text/xml" href="styles.xsl"?>
+```
+
+## Espaces de nommage
+
+Ajoute des fonctionnalités à la spécification XML 1.0
+
+Permet la coexistence de plusieurs vocabulaires XML
+
+Déclaration obligatoire :
+
+- dans l’élément qui l’utilisera (attention à la portée)
+- avec une URI comme valeur de l’attribut `xmlns` (*XML namespace*)
+
+:::: {.columns}
+
+::: {.column width="50%"}
+```xml
+<!-- 'xlink' namespace is declared in this text element -->
+<text xmlns:xlink="http://www.w3.org/1999/xlink">
+  Un lien vers l’infini et au-delà !
+</text>
+
+<!-- This one is out of reach! -->
+<text xlink:href="lien.xml"/>
+```
+:::
+
+::: {.column width="50%"}
+```xml
+<!-- 'xlink' namespace is declared in the parent node -->
+<data xmlns:xlink="http://www.w3.org/1999/xlink">
+  <text>Un lien vers l’infini et au-delà !</text>
+  <lk xlink:href="resource.xml"/>
+</data>
+```
+:::
+
+::::
+
+## XML design
+
+Données stockées indifféremment dans des éléments ou des attributs
+
+:::: {.columns}
+
+::: {.column width="50%"}
+### Modèle par éléments
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<cheeses>
+  <cheese>
+    <name>Beaufort</name>
+    <milk>
+      <type>Cru</type>
+      <animal>Vache</animal>
+    </milk>
+  </cheese>
+  <cheese>
+    <name>Crottin de Chavignol</name>
+      <milk>
+        <type>Cru</type>
+        <animal>Chèvre</animal>
+      </milk>
+  </cheese>
+</cheeses>
+```
+:::
+
+::: {.column width="50%"}
+### Modèle par attributs
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<cheeses>
+  <cheese name="Beaufort" typeMilk="cru" animal="vache" />
+  <cheese name="Crottin de Chavignol" typeMilk="cru" animal="chèvre" />
+</cheeses>
+```
+- plus concis
+- moins lisible avec un volume de données très important
+- modèle mixte possible !
+:::
+
+::::
+
+---
+
+Comment justifier l’un ou l’autre des modèles ?
+
+- sensibilité personnelle
+- expérience
+
+Questions pour orienter le design :
+
+- principe de la donnée fondamentale
+- principe de l’information structurée
+- principe de dépendance entre l’élément et ses attributs
+- principe de lisibilité des données
+
+---
+
+### Le contenu est-il fondamental ou accessoire ?
+
+La réponse à cette question doit aboutir à une distinction essentielle entre donnée et métadonnée. Dans le premier cas, il convient d’utiliser un élément ; dans le second, un attribut.
+
+```xml
+<!-- The genre of the book is regarded here as non-essential information -->
+<book genre="roman">
+  <!-- Titles should always been stored in elements -->
+  <title>Moby Dick</title>
+</book>
+```
+
+### La donnée répond-elle à une norme, un format ?
+
+Toutes les informations qui suivent un formatage défini mériteraient d’être encodées dans des attributs.
+
+```xml
+<!-- Publication date complies with ISO-8601 standard -->
+<book genre="roman" pubDate="1851-11-14">
+  <title>Moby Dick</title>
+</book>
+```
+
+---
+
+### Le contenu est-il composé d’une donnée et de son modificateur ?
+
+L’une des distinctions entre attributs et éléments réside dans l’utilité des premiers pour modifier ou affiner la précision des seconds.
+
+```xml
+<book genre="roman" pubDate="1851-11-14">
+  <title>Moby Dick</title>
+  <!-- The attribute retains the unit that modifies the stored numeric value -->
+  <pages unit="p">379</pages>
+</book>
+```
+
+### Le contenu sera-t-il lu par un agent humain ?
+
+Les données sont soit destinées à être consultées par un agent humain, soit destinées à être traitées par un programme informatique. Caractériser leur sort permet de déterminer s’il est préférable de les encoder dans des éléments ou avec des attributs.
+
+```xml
+<book genre="roman" pubDate="1851-11-14">
+  <title>Moby Dick</title>
+  <pages unit="p">379</pages>
+  <!-- The summary of a book is intended more for display than for processing -->
+  <summary>Attiré par la mer et le large, Ismaël, le narrateur, décide de partir à la chasse à la baleine. Il embarque sur le Péquod, baleinier avec son nouvel ami Queequeg commandé par le capitaine Achab. Ismaël se rend vite compte que le bateau ne chasse pas uniquement pour alimenter le marché de la baleine. Achab recherche Moby Dick, un cachalot blanc particulièrement féroce et d'une taille impressionnante, qui lui a arraché une jambe par le passé. Achab emmène son équipage dans un voyage autour du monde à la poursuite du cachalot dont il a juré de se venger. Le Péquod finira par sombrer au large des îles Gilbert en laissant Ismaël seul survivant, flottant sur un cercueil. Le roman est loin de se réduire à son aspect fictionnel : de nombreux chapitres sont consacrés à décrire minutieusement la technique de la chasse à la baleine ainsi qu'à s'interroger sur la nature (réelle ou symbolique) des cétacés, et peuvent se lire comme une seconde traque, spéculative et métaphysique. Dans Moby-Dick, Melville emploie un langage stylisé, symbolique et métaphorique pour explorer de nombreux thèmes complexes qu'il estime universels. À travers le voyage de son personnage principal, les concepts de classe et de statut social, du Bien et du Mal, et de l'existence de Dieu sont tous aussi bien explorés que les interrogations d'Ismaël sur ses convictions et sa place dans l'univers. Ce livre est souvent considéré comme l'emblème du romantisme américain. Bien que sa première édition n'ait pas soulevé l'enthousiasme de la critique, Moby-Dick est aujourd'hui considéré comme l'un des plus importants romans de langue anglaise. En 1954, dans Ten Novels and Their Authors, l'écrivain britannique William Somerset Maugham a classé Moby Dick parmi les dix plus grands romans.</summary>
+</book>
+```
