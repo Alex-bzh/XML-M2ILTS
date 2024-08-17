@@ -1,0 +1,13 @@
+#!/bin/bash
+
+mkdir -p ~/lib  && cd ~/lib
+
+#
+# quarto
+#
+git clone https://github.com/quarto-dev/quarto-cli
+cd quarto-cli
+./configure.sh
+
+# go to home
+cd ~/
