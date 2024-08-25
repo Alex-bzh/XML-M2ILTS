@@ -475,3 +475,42 @@ Les données sont soit destinées à être consultées par un agent humain, soit
   <summary>Attiré par la mer et le large, Ismaël, le narrateur, décide de partir à la chasse à la baleine. Il embarque sur le Péquod, baleinier avec son nouvel ami Queequeg commandé par le capitaine Achab. Ismaël se rend vite compte que le bateau ne chasse pas uniquement pour alimenter le marché de la baleine. Achab recherche Moby Dick, un cachalot blanc particulièrement féroce et d'une taille impressionnante, qui lui a arraché une jambe par le passé. Achab emmène son équipage dans un voyage autour du monde à la poursuite du cachalot dont il a juré de se venger. Le Péquod finira par sombrer au large des îles Gilbert en laissant Ismaël seul survivant, flottant sur un cercueil. Le roman est loin de se réduire à son aspect fictionnel : de nombreux chapitres sont consacrés à décrire minutieusement la technique de la chasse à la baleine ainsi qu'à s'interroger sur la nature (réelle ou symbolique) des cétacés, et peuvent se lire comme une seconde traque, spéculative et métaphysique. Dans Moby-Dick, Melville emploie un langage stylisé, symbolique et métaphorique pour explorer de nombreux thèmes complexes qu'il estime universels. À travers le voyage de son personnage principal, les concepts de classe et de statut social, du Bien et du Mal, et de l'existence de Dieu sont tous aussi bien explorés que les interrogations d'Ismaël sur ses convictions et sa place dans l'univers. Ce livre est souvent considéré comme l'emblème du romantisme américain. Bien que sa première édition n'ait pas soulevé l'enthousiasme de la critique, Moby-Dick est aujourd'hui considéré comme l'un des plus importants romans de langue anglaise. En 1954, dans Ten Novels and Their Authors, l'écrivain britannique William Somerset Maugham a classé Moby Dick parmi les dix plus grands romans.</summary>
 </book>
 ```
+
+---
+
+### XML comme base de données
+
+Conversion directe d’un document n’est pas le but de XML
+
+- extraction de données afin de séparer le fond de la forme
+- identifier les segments à stocker
+- normaliser les données
+
+:::: {.columns}
+
+::: {.column width="50%"}
+<div style="border: 1px solid black; padding:2px;">
+  <h3>Catalogue de bibliothèque</h3>
+  <h4>Moby Dick</h4>
+  <p style="font-size: smaller;"><b>Genre :</b> Roman</p>
+  <p style="font-size: smaller;"><b>Date de publication :</b> 14 novembre 1851</p>
+  <p style="font-size: smaller;"><b>Nombre de pages :</b> 379</p>
+  <p style="font-size: smaller;"><b>Résumé :</b> Attiré par la mer et le large, Ismaël, le narrateur, décide de partir à la chasse à la baleine. Il embarque sur le Péquod, baleinier avec son nouvel ami Queequeg…</p>
+</div>
+:::
+
+::: {.column width="50%"}
+```xml
+<catalog>
+  <books>
+    <book genre="roman" pubDate="1851-11-14">
+      <title>Moby Dick</title>
+      <pages unit="p">379</pages>
+      <summary>Attiré par la mer et le large, Ismaël, le narrateur, décide de partir à la chasse à la baleine. Il embarque sur le Péquod, baleinier avec son nouvel ami Queequeg commandé par le capitaine Achab. Ismaël se rend vite compte que le bateau ne chasse pas uniquement pour alimenter le marché de la baleine. Achab recherche Moby Dick, un cachalot blanc particulièrement féroce et d'une taille impressionnante, qui lui a arraché une jambe par le passé. Achab emmène son équipage dans un voyage autour du monde à la poursuite du cachalot dont il a juré de se venger. Le Péquod finira par sombrer au large des îles Gilbert en laissant Ismaël seul survivant, flottant sur un cercueil. Le roman est loin de se réduire à son aspect fictionnel : de nombreux chapitres sont consacrés à décrire minutieusement la technique de la chasse à la baleine ainsi qu'à s'interroger sur la nature (réelle ou symbolique) des cétacés, et peuvent se lire comme une seconde traque, spéculative et métaphysique. Dans Moby-Dick, Melville emploie un langage stylisé, symbolique et métaphorique pour explorer de nombreux thèmes complexes qu'il estime universels. À travers le voyage de son personnage principal, les concepts de classe et de statut social, du Bien et du Mal, et de l'existence de Dieu sont tous aussi bien explorés que les interrogations d'Ismaël sur ses convictions et sa place dans l'univers. Ce livre est souvent considéré comme l'emblème du romantisme américain. Bien que sa première édition n'ait pas soulevé l'enthousiasme de la critique, Moby-Dick est aujourd'hui considéré comme l'un des plus importants romans de langue anglaise. En 1954, dans Ten Novels and Their Authors, l'écrivain britannique William Somerset Maugham a classé Moby Dick parmi les dix plus grands romans.</summary>
+    </book>
+  </books>
+</catalog>
+```
+:::
+
+::::
