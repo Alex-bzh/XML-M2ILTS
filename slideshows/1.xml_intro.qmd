@@ -41,7 +41,7 @@ format:
 
 ::::
 
-[Question :]{.important} Comment structurer l’information ?
+**Question :** Comment structurer l’information ?
 
 ::: {.notes}
 Du point de vue sémantique, aucun octet n'est supérieur à un autre.
@@ -170,7 +170,7 @@ Face à une phrase, différents besoins :
 
 ---
 
-[Analyse syntaxique]{.important} pour [décrire](https:www.lemonde.fr) la structure d’une phrase :
+**Analyse syntaxique** pour [décrire](https:www.lemonde.fr) la structure d’une phrase :
 
 - langage de description
 - étiquettes (*tags*)
@@ -189,11 +189,11 @@ Avec XML, processus identique !
 
 ---
 
-[Objectif :]{.important} organiser de façon logique et hiérarchisée un ensemble afin de faciliter l’accès à ses constituants
+**Objectif :** organiser de façon logique et hiérarchisée un ensemble afin de faciliter l’accès à ses constituants
 
-[Problématique :]{.important} un fichier étant une suite d’octets, comment en représenter la structure ?
+**Problématique :** un fichier étant une suite d’octets, comment en représenter la structure ?
 
-[Solution :]{.important} utiliser un langage informatique de description
+**Solution :** utiliser un langage informatique de description
 
 - balises (étiquettes de description)
 - syntaxe (règles d’écriture)
@@ -229,7 +229,7 @@ Description de la phrase *Le petit chat est mort* :
 
 ---
 
-[XML :]{.important} *Extensible Markup Language*
+**XML :** *Extensible Markup Language*
 
 - Standard du W3C : [https://www.w3.org/TR/REC-xml/](https://www.w3.org/TR/REC-xml/){.external target="_blank"}
 - Méta-langage pour créer des langages de description :
@@ -245,7 +245,7 @@ Description de la phrase *Le petit chat est mort* :
 
 ---
 
-[Balise :]{.important} dispositif de signalisation autour d’un segment
+**Balise :** dispositif de signalisation autour d’un segment
 
 - syntaxe XML stricte
 - étiquette d’un format défini ou personnalisé
@@ -284,19 +284,19 @@ Pour produire, analyser, stocker…
 :::
 
 ::: {.column width="50%"}
-[Parseur :]{.important} analyse syntaxique et modélisation du document XML
+**Parseur :** analyse syntaxique et modélisation du document XML
 
-[Grammaire :]{.important} règles de composition d’un document XML
+**Grammaire :** règles de composition d’un document XML
 
-[Requête :]{.important} sélection et transformation de fragments XML
+**Requête :** sélection et transformation de fragments XML
 
-[Liens :]{.important} lier des fragments entre eux
+**Liens :** lier des fragments entre eux
 
-[Porteurs :]{.important} protocoles pour l’échange de données XML
+**Porteurs :** protocoles pour l’échange de données XML
 
-[Langages descriptifs :]{.important} formats de données pour applications spécifiques
+**Langages descriptifs :** formats de données pour applications spécifiques
 
-[Métadonnées :]{.important} décrire des langages descriptifs
+**Métadonnées :** décrire des langages descriptifs
 :::
 
 ::::

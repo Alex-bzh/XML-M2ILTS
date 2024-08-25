@@ -14,12 +14,12 @@ format:
 
 ## Présentation
 
-[XML :]{.important} *Extensible Markup Language*
+**XML :** *Extensible Markup Language*
 
-[26 novembre 2008 :]{.important} XML 1.0  
+**26 novembre 2008 :** XML 1.0  
 [https://www.w3.org/TR/REC-xml](https://www.w3.org/TR/REC-xml)
 
-[16 août 2006 :]{.important} XML 1.1 (pour des cas très spécifiques)  
+**16 août 2006 :** XML 1.1 (pour des cas très spécifiques)  
 [https://www.w3.org/TR/xml11](https://www.w3.org/TR/xml11)
 
 - format personnalisé (vocabulaire, grammaire)
@@ -31,12 +31,12 @@ format:
 :::: {.columns}
 
 ::: {.column width="60%"}
-[API :]{.important} *Application Programming Interface*
+**API :** *Application Programming Interface*
 
 Deux API principales :
 
-- [DOM :]{.important} *Document Object Model*
-- [SAX :]{.important} *Simple API for XML*
+- **DOM :** *Document Object Model*
+- **SAX :** *Simple API for XML*
 
 Traitement d’un fichier XML :
 
@@ -262,7 +262,7 @@ Séquence `--` interdite dans les commentaires
 <!-- Include two -- will provoke a syntax error -->
 ```
 
-[Attention !]{.important} Traitement différent selon le parseur :
+**Attention !** Traitement différent selon le parseur :
 
 ```xml
 <text>
