@@ -205,7 +205,7 @@ DOM est implémenté par les navigateurs Web
 :::
 
 ::: {.column width="50%"}
-Langages informatiques implémentent plusieurs parsers avec des objectifs différents :
+Langages informatiques implémentent plusieurs *parsers* avec des objectifs différents :
 
 - JavaScript (*DOMParser*, *jQuery.ParseXML*)
 - PHP (*DOM*, *XMLReader*, *libxml*, *SDO*, *SimpleXML*)
@@ -213,3 +213,20 @@ Langages informatiques implémentent plusieurs parsers avec des objectifs diffé
 :::
 
 ::::
+
+## Notions de validation
+
+- validation syntaxique permet de déclarer un document XML comme **bien formé**
+- validation grammaticale permet de déclarer un document XML bien formé comme **valide**
+
+Vérifier la conformité et la validité d’un document XML avec un *parser* :
+
+- langage informatique
+- outil en ligne de commande
+- service en ligne
+- application XML
+
+```bash
+# syntactic validation using 'xmllint', a command-line tool in Linux
+xmllint path/to/document.xml
+```
