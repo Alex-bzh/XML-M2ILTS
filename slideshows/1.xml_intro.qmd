@@ -1,0 +1,384 @@
+---
+title: "Une introduction à XML pour les métiers de la traduction"
+title-slide-attributes:
+  data-background-color: "#002f2f"
+author: "Alexandre Roulois (Université Paris-Cité, IRIF, CNRS)"
+format:
+  pdf:
+    toc: true
+  revealjs:
+    slide-number: true
+    show-slide-number: all
+    smaller: true
+    scrollable: true
+    theme: showcase.scss
+---
+
+# Décrire des données
+
+>« Le concret, c’est ce qui est intéressant, la description d’objets, de paysages, de personnages ou d’actions ; en dehors, c’est du n’importe quoi. » (Claude Simon)
+
+## De l’interprétation
+
+> « Et l’on peut me réduire à vivre sans bonheur,  
+> Mais non pas me résoudre à vivre sans honneur. » (*Le Cid* de Corneille, Acte II scène 1)
+
+:::: {.columns}
+
+::: {.column width="50%"}
+### Point de vue humain
+
+- suite de caractères
+- structure complexe (mots, phrase, ponctuation)
+- avec signification
+:::
+
+::: {.column width="50%"}
+### Point de vue machine
+
+- suite d’octets (`…0101 00110010 11011110 01100001 100001…`)
+- structure simple (tout est octet)
+- aucune signification
+:::
+
+::::
+
+**Question :** Comment structurer l’information ?
+
+::: {.notes}
+Du point de vue sémantique, aucun octet n'est supérieur à un autre.
+:::
+
+## Exemple de l’analyse syntaxique de surface
+
+> « Le petit chat est mort. » (*L’école des femmes* de Molière, Acte II scène 5)
+
+Représentation sous forme de graphe :
+
+::: {.text-center}
+```{mermaid}
+flowchart TB
+  A(Ph):::tag --> B[Le petit chat est mort.]:::text
+
+  classDef tag fill:#f96,stroke:white
+  classDef text fill:white,stroke:#f96
+```
+:::
+
+- message identique
+- information supplémentaire par étiquetage
+
+---
+
+Granularité plus fine par segmentation en constituants :
+
+::: {.text-center}
+```{mermaid}
+flowchart TB
+  A(Ph):::tag --> B(SN):::tag
+  A --> C(SV):::tag
+  A --> D(PONCT):::tag
+  B --> E[Le petit chat]:::text
+  C --> F[est mort]:::text
+  D --> G[.]:::text
+
+  classDef tag fill:#f96,stroke:white
+  classDef text fill:white,stroke:#f96
+```
+:::
+
+- *Le petit chat* : syntagme nominal
+- *est mort* : syntagme verbal
+- *.* : ponctuation
+
+Phrase identique mais davantage d’informations !
+
+---
+
+Segmentation en mots `+` étiquetage morphosyntaxique :
+
+::: {.text-center}
+```{mermaid}
+flowchart TD
+  PH(Ph):::tag
+  SN_1(SN):::tag
+  SV(SV):::tag
+  PONCT(PONCT):::tag
+  DET(DET):::tag
+  SN_2(SN):::tag
+  ADJ_1(ADJ):::tag
+  ADJ_2(ADJ):::tag
+  NC(NC):::tag
+  V(V):::tag
+
+  PH --> SN_1 --> DET ---> Le:::text
+  PH --> SV --> V ---> est:::text
+  PH --> PONCT ----> .:::text
+  SN_1 --> SN_2 --> ADJ_1 --> petit:::text
+  SV --> ADJ_2 ---> mort:::text
+  SN_2 --> NC --> chat:::text
+
+  classDef tag fill:#f96,stroke:white
+  classDef text fill:white,stroke:#f96
+```
+:::
+
+- phrase identique
+- volume analyse `>` au volume phrase
+- modélisation sous forme d’arbre
+
+---
+
+:::: {.columns}
+
+::: {.column width="50%"}
+Pourquoi une analyse syntaxique ?
+
+- répond au besoin de mettre en évidence la structure d’une phrase
+- succède à une analyse lexicale
+- préalable à une analyse sémantique
+:::
+
+::: {.column width="50%"}
+Face à une phrase, différents besoins :
+
+- lire
+- déclamer
+- apprendre
+- comprendre
+- analyser
+- …
+:::
+
+::::
+
+:::: {.columns}
+
+::: {.column width="50%"}
+### Observations
+
+- agent humain effectue opérations selon ses besoins
+- machine ne fait rien car aucun besoin
+:::
+
+::: {.column width="50%"}
+### Questions
+
+- pourquoi utiliser une machine ?
+- comment traduire ses besoins à une machine ?
+:::
+
+::::
+
+---
+
+**Analyse syntaxique** pour [décrire](https:www.lemonde.fr) la structure d’une phrase :
+
+- langage de description
+- étiquettes (*tags*)
+- vocabulaire (`SN` `V` `DET` `NC …`)
+- grammaire :
+  - $\text{V} \not\supset \text{SV}$
+  - $\text{V} + \text{ADJ} = \text{SV}$
+  - $\text{ADJ} \in \text{SN} \text{ ou } \text{ADJ} \in \text{SV}$
+  - …
+
+Avec XML, processus identique !
+
+# Un langage de balisage
+
+>« Oh ! Quel dommage Mme Chombier ! » (Jean-Marie Bigard, *La valise RTL*)
+
+---
+
+**Objectif :** organiser de façon logique et hiérarchisée un ensemble afin de faciliter l’accès à ses constituants
+
+**Problématique :** un fichier étant une suite d’octets, comment en représenter la structure ?
+
+**Solution :** utiliser un langage informatique de description
+
+- balises (étiquettes de description)
+- syntaxe (règles d’écriture)
+- vocabulaire (libellé des étiquettes)
+- grammaire (agencement des balises)
+
+---
+
+Description de la phrase *Le petit chat est mort* :
+
+```xml
+<!-- part-of-speech tagging -->
+<Ph>
+  <SN num="1">
+    <DET>Le</DET>
+    <SN num="2">
+      <ADJ num="1">petit</ADJ>
+      <NC>chat</NC>
+    </SN>
+  </SN>
+  <SV>
+    <V>est</V>
+    <ADJ num="2">mort</ADJ>
+  </SV>
+  <PONCT>.</PONCT>
+</Ph>
+```
+
+- balises pour étiqueter un segment : `<NC>chat</NC>`
+- syntaxe : `<NC>` et non pas `?NC++`
+- vocabulaire : `NC` plutôt que `Ceci est un nom commun`
+- grammaire : $NC \notin V$
+
+---
+
+**XML :** *Extensible Markup Language*
+
+- Standard du W3C : [https://www.w3.org/TR/REC-xml/](https://www.w3.org/TR/REC-xml/){.external target="_blank"}
+- Méta-langage pour créer des langages de description :
+  - formats personnalisés
+  - formats normalisés (SVG, MathML…)
+  - formats consensuels (TEI, TMX…)
+- Souplesse accrue :
+  - balises et attributs personnalisables
+  - exploitations multiples
+- Rigidité opportune :
+  - syntaxe stricte XML vs HTML permissif
+  - idéal pour conserver et échanger des données
+
+---
+
+**Balise :** dispositif de signalisation autour d’un segment
+
+- syntaxe XML stricte
+- étiquette d’un format défini ou personnalisé
+- grammaire de validation normée, personnalisée ou absente
+
+```xml
+<!-- customised format -->
+<Ph>Le petit chat est mort.</Ph>
+<!-- HTML (standard) -->
+<p>Le petit chat est mort.</p>
+<!-- TEI -->
+<sp>
+    <l>Le petit chat est mort.</l>
+</sp>
+```
+
+Formats HTML et TEI font référence à des grammaires :
+
+- norme W3C pour HTML
+- directives du consortium TEI pour le format TEI
+
+Pour le format personnalisé, la grammaire est à créer !
+
+# La galaxie XML
+
+> « Il y a longtemps dans une galaxie lointaine, très lointaine… » (*Star Wars*)
+
+## Un écosystème de technologies
+
+:::: {.columns}
+
+::: {.column .text-center width="50%"}
+Pour produire, analyser, stocker…
+
+![Représentation de la galaxie XML](./figs/xml_galaxy.png)
+:::
+
+::: {.column width="50%"}
+**Parseur :** analyse syntaxique et modélisation du document XML
+
+**Grammaire :** règles de composition d’un document XML
+
+**Requête :** sélection et transformation de fragments XML
+
+**Liens :** lier des fragments entre eux
+
+**Porteurs :** protocoles pour l’échange de données XML
+
+**Langages descriptifs :** formats de données pour applications spécifiques
+
+**Métadonnées :** décrire des langages descriptifs
+:::
+
+::::
+
+## Intérêts pour la traduction
+
+:::: {.columns}
+
+::: {.column width="50%"}
+- langage extensible
+- règles syntaxiques strictes facilitent la structuration des données
+- grammaires spécifiques :
+  - TMX (mémoires de traduction)
+  - TBX (glossaires)
+  - XLIFF (organisation du flux de travail pour la localisation)
+- intégration aux outils de TAO :
+  - Trados
+  - MemoQ
+  - OmegaT
+- organiser le traitement automatique des savoirs :
+  - RDFS (Web sémantique)
+  - OWL (ontologies)
+:::
+
+::: {.column .text-center width="50%"}
+```{mermaid}
+flowchart TD
+  A["Document source"]:::text --> B{"Extraction\n des segments\n à traduire"}:::tag
+  B --> C[("Stockage XML")]
+  B --> D["Squelette"]:::text
+  C --> E{"Traduction"}:::tag --> C
+  C --> D ==> F["Documents cibles"]:::text
+
+  classDef tag fill:#f96,stroke:white,color:white
+  classDef text fill:white,stroke:#f96
+```
+:::
+
+::::
+
+## Exemple de chaîne de production
+
+:::: {.columns}
+
+::: {.column width="50%"}
+<div style="border: 1px solid black; padding:2px;">
+<h3 style="color: black;">Un gouvernement en perte de vitesse</h3>
+<p style="font-weight: bold;">Face à une série de crises politiques, économiques et sociales, le gouvernement semble perdre son influence et sa capacité à répondre aux attentes des citoyens.</p>
+<p style="font-size: smaller;">Alors que la popularité des dirigeants s'effrite, les réformes peinent à s'imposer dans un climat de défiance généralisée. L'absence de solutions concrètes aggrave les tensions, laissant place à un sentiment croissant de déconnexion entre les gouvernants et les gouvernés.</p>
+</div>
+:::
+
+::: {.column width="50%"}
+1. 3 zones identifiées (titre, chapeau, texte)
+```txt
+% start heading
+  unit_1 = Un gouvernement en perte de vitesse
+% end heading
+% start lead
+  unit_2 = Face à une série de crises politiques, économiques et sociales, le gouvernement semble perdre son influence et sa capacité à répondre aux attentes des citoyens.
+% end lead
+% start text
+  unit_3 = Alors que la popularité des dirigeants s'effrite, les réformes peinent à s'imposer dans un climat de défiance généralisée. L'absence de solutions concrètes aggrave les tensions, laissant place à un sentiment croissant de déconnexion entre les gouvernants et les gouvernés.
+% end text
+```
+2. base de données :
+```xml
+<unit id="1">Un gouvernement en perte de vitesse</unit>
+<unit id="2">Face à une série de crises politiques, économiques et sociales, le gouvernement semble perdre son influence et sa capacité à répondre aux attentes des citoyens.</unit>
+<unit id="3">Alors que la popularité des dirigeants s'effrite, les réformes peinent à s'imposer dans un climat de défiance généralisée. L'absence de solutions concrètes aggrave les tensions, laissant place à un sentiment croissant de déconnexion entre les gouvernants et les gouvernés.</unit>
+```
+3. traduction :
+```xml
+<unit id="2">
+  <variant lang="fr">Face à une série de crises politiques, économiques et sociales, le gouvernement semble perdre son influence et sa capacité à répondre aux attentes des citoyens.</variant>
+  <variant lang="en">In the face of a series of political, economic, and social crises, the government appears to be losing its influence and ability to meet citizens' expectations.</variant>
+</unit>
+```
+4. extraction des variantes d’une unité
+5. production du document de sortie
+:::
+
+::::
