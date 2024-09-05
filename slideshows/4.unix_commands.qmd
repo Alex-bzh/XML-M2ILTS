@@ -41,7 +41,7 @@ format:
 - syntaxe de l’appel d’une commande :
 ```bash
 # command [-options] [arguments]
-ls -l ./data/book_of_secrets.xml
+ls -l ./data/XML/book_of_secrets.xml
 ```
 :::
 
