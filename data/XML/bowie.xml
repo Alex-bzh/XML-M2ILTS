@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bowie>
+	<bio
+		lastname="Jones"
+		firstname="David Robert"
+		stageName="David Bowie"
+		birth="1947-01-08"
+		death="2016-01-10"
+		birthPlace="Brixton"/>
+	<albums>
+		<album title="Hot Space" albID="alb1"/>
+		<album title="Aladdin Sane" albID="alb2"/>
+	</albums>
+	<duos>
+		<song
+			title="Under Pressure"
+			performer="Queen"
+			duration="PT4M2S"
+			refAlbID="alb1"/>
+		<song
+			title="Dancing in the Street"
+			performer="Mick Jagger"
+			duration="PT3M24S"/>
+		<song
+			title="Let's spend the night together"
+			performer="Mick Jagger"
+			duration="PT3M43S"
+			refAlbID="alb2" />
+	</duos>
+</bowie>

@@ -1,0 +1,21 @@
+<!ELEMENT bowie (bio, albums, duos)>
+	<!ELEMENT bio EMPTY>
+	<!ATTLIST bio
+		lastname CDATA #REQUIRED
+		firstname CDATA #REQUIRED
+		stageName CDATA #REQUIRED
+		birth CDATA #REQUIRED
+		death CDATA #REQUIRED
+		birthPlace CDATA #REQUIRED>
+	<!ELEMENT albums (album+)>
+		<!ELEMENT album EMPTY>
+		<!ATTLIST album
+			title CDATA #REQUIRED
+			albID ID #REQUIRED>
+	<!ELEMENT duos (song+)>
+		<!ELEMENT song EMPTY>
+		<!ATTLIST song
+			title CDATA #REQUIRED
+			performer CDATA #REQUIRED
+			duration CDATA #REQUIRED
+			refAlbID IDREF #IMPLIED>
