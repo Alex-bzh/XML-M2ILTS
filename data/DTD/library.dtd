@@ -1,0 +1,34 @@
+<!ELEMENT library (books, authors) >
+
+<!ELEMENT books (book+) >
+<!ELEMENT authors (author+) >
+
+<!ELEMENT book (title, publication, summary, mark) >
+<!ELEMENT title (#PCDATA) >
+<!ELEMENT publication (#PCDATA) >
+<!ELEMENT summary (#PCDATA) >
+<!ELEMENT mark (#PCDATA) >
+
+<!ELEMENT author (lastName, firstName, birth, death) >
+<!ELEMENT lastName (#PCDATA) >
+<!ELEMENT firstName (#PCDATA) >
+<!ELEMENT birth (#PCDATA) >
+<!ELEMENT death (#PCDATA) >
+
+<!ATTLIST title
+    original_title CDATA #IMPLIED
+    original_lang (fr | en | es) #IMPLIED
+>
+<!ATTLIST book
+    ref_author IDREF #REQUIRED
+    xml:lang (fr | es) #REQUIRED
+>
+<!ATTLIST author
+    id_author ID #REQUIRED
+>
+<!ATTLIST birth
+    place CDATA #REQUIRED
+>
+<!ATTLIST death
+    place CDATA #REQUIRED
+>
