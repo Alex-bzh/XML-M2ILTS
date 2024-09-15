@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tmx version="1.4">
+	<header
+		creationtool="Sublime Text"
+		creationtoolversion="3"
+		segtype="phrase"
+		o-tmf="undefined"
+		adminlang="fr"
+		srclang="ja"
+		datatype="plaintext">
+	</header>
+	<body>
+		<!-- First verse -->
+		<tu>
+			<tuv xml:lang="ja">
+				<seg>古池や</seg>
+			</tuv>
+			<tuv xml:lang="ja-Latn">
+				<seg>furuike ya</seg>
+			</tuv>
+			<tuv xml:lang="fr">
+				<seg>Un vieil étang et</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Old pond</seg>
+			</tuv>
+		</tu>
+		<!-- Second verse -->
+		<tu>
+			<tuv xml:lang="ja">
+				<seg>蛙飛込む</seg>
+			</tuv>
+			<tuv xml:lang="ja-Latn">
+				<seg>kawazu tobikomu</seg>
+			</tuv>
+			<tuv xml:lang="fr">
+				<seg>Une grenouille qui plonge</seg>
+			</tuv>
+			<tuv>
+				<seg>A frog leaps in</seg>
+			</tuv>
+		</tu>
+		<!-- Third verse -->
+		<tu>
+			<tuv xml:lang="ja">
+				<seg>水の音</seg>
+			</tuv>
+			<tuv xml:lang="ja-Latn">
+				<seg>mizu no oto</seg>
+			</tuv>
+			<tuv xml:lang="fr">
+				<seg>Le bruit de l’eau</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Water's sound</seg>
+			</tuv>
+		</tu>
+	</body>
+</tmx>
