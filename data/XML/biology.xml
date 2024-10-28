@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+
+  <rdf:Description rdf:about="http://example.org/glossaire#Cellule">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:prefLabel xml:lang="fr">Cellule</skos:prefLabel>
+    <skos:prefLabel xml:lang="en">Cell</skos:prefLabel>
+    <skos:prefLabel xml:lang="es">Célula</skos:prefLabel>
+    <skos:definition xml:lang="fr">Unité fondamentale de la vie, constituée de cytoplasme et d'une membrane cellulaire.</skos:definition>
+    <skos:definition xml:lang="en">Fundamental unit of life, consisting of cytoplasm and a cell membrane.</skos:definition>
+    <skos:definition xml:lang="es">Unidad fundamental de la vida, compuesta de citoplasma y una membrana celular.</skos:definition>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://example.org/glossaire#Photosynthèse">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:prefLabel xml:lang="fr">Photosynthèse</skos:prefLabel>
+    <skos:prefLabel xml:lang="en">Photosynthesis</skos:prefLabel>
+    <skos:prefLabel xml:lang="es">Fotosíntesis</skos:prefLabel>
+    <skos:definition xml:lang="fr">Processus par lequel les plantes convertissent la lumière en énergie chimique.</skos:definition>
+    <skos:definition xml:lang="en">Process by which plants convert light into chemical energy.</skos:definition>
+    <skos:definition xml:lang="es">Proceso mediante el cual las plantas convierten la luz en energía química.</skos:definition>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://example.org/glossaire#ADN">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:prefLabel xml:lang="fr">ADN</skos:prefLabel>
+    <skos:prefLabel xml:lang="en">DNA</skos:prefLabel>
+    <skos:prefLabel xml:lang="es">ADN</skos:prefLabel>
+    <skos:definition xml:lang="fr">Molécule qui porte l'information génétique dans tous les organismes vivants.</skos:definition>
+    <skos:definition xml:lang="en">Molecule that carries genetic information in all living organisms.</skos:definition>
+    <skos:definition xml:lang="es">Molécula que lleva la información genética en todos los organismos vivos.</skos:definition>
+  </rdf:Description>
+
+</rdf:RDF>
