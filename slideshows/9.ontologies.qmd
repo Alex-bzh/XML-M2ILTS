@@ -16,7 +16,7 @@ format:
 
 ## Du discours sur l’être à la représentation du monde
 
-**Philosophie :** étude de l’être en tant qu’étant.
+**Philosophie :** *oντoλoγiα*, étude de l’être en tant qu’étant.
 
 **Sciences de l’information :** modéliser les connaissances d’un domaine spécifique en reliant ses concepts entre eux.
 
@@ -518,7 +518,34 @@ _:hasMass a rdf:Property ;
 
 ---
 
-## Autres propriétés
+## Autres propriétés et classes
 
-- Des commentaires en langue naturelle peuvent être intégrées dans une propriété `rdfs:comment` ;
-- la propriété `rdfs:seeAlso` ajoute une relation non qualifiée (aucune inférence) entre deux classes.
+- propriété `rdfs:comment`, pour des commentaires en langue naturelle :
+```xml
+<rdf:Property rdf:about="hasMass">
+  <rdfs:label xml:lang="en">has mass</rdfs:label>
+  <rdfs:label xml:lang="fr">a une masse</rdfs:label>
+  <rdfs:domain rdf:resource="CelestialBody"/>
+  <rdfs:range rdf:resource="xsd:decimal"/>
+  <rdfs:comment xml:lang="fr">Propriété indiquant la masse d’un objet stellaire, exprimée en une certaine unité de mesure.</rdfs:comment>
+</rdf:Property>
+```
+- propriété `rdfs:seeAlso` pour ajouter une relation non qualifiée entre deux classes :
+```xml
+<rdf:Property rdf:about="hasMass">
+  <rdfs:label xml:lang="en">has mass</rdfs:label>
+  <rdfs:label xml:lang="fr">a une masse</rdfs:label>
+  <rdfs:domain rdf:resource="CelestialBody"/>
+  <rdfs:range rdf:resource="xsd:decimal"/>
+  <rdfs:comment xml:lang="fr">Propriété indiquant la masse d'un objet, exprimée en une certaine unité de mesure.</rdfs:comment>
+  <rdfs:seeAlso rdf:resource="http://example.org/massConcept"/>
+</rdf:Property>
+```
+- classe `rdfs:Literal` pour représenter des données pour lesquelles on n’a pas besoin de davantage de structure :
+```xml
+<rdf:Property rdf:about="description">
+  <rdfs:label>Description</rdfs:label>
+  <rdfs:domain rdf:resource="CelestialBody"/>
+  <rdfs:range rdf:resource="rdfs:Literal"/>
+</rdf:Property>
+```
