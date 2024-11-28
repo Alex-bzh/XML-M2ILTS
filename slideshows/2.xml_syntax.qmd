@@ -300,8 +300,9 @@ flowchart TD
 flowchart TD
   A[text]:::tag --> B[title]:::tag --> G["Le vaillant petit tailleur"]:::text
   A --> C[version]:::tag --> E[author]:::tag --> H["Les frères Grimm"]:::text
-  A --> D[version]:::tag --> F[author]:::tag
-  --> J["The most faithful version of the tale"] --> I["Éric Chevillard"]:::text
+  A --> D[version]:::tag
+  D --> J["The most faithful version of the tale"]
+  D --> F[author]:::tag --> I["Éric Chevillard"]:::text
 
   classDef tag fill:#f96,stroke:white,color:white
   classDef text fill:white,stroke:#f96
