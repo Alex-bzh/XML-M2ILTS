@@ -1,3 +1,5 @@
+name: TI1FE050
+channels:
+  - conda-forge
 dependencies:
-- octave_kernel
-- octave
+  - jupyterlab

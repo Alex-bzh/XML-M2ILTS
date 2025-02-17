@@ -1,2 +1,9 @@
-gnuplot
-ghostscript
+default-jre
+default-jdk
+libxml2
+libxml2-dev
+libxml-libxml-perl
+libwww-perl
+liblwp-protocol-https-perl
+perl
+xsltproc
