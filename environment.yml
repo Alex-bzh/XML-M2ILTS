@@ -1,1 +1,5 @@
 name: TI1FE050
+channels:
+  - conda-forge
+dependencies:
+  - jupyterlab
