@@ -31,6 +31,12 @@
 			<summary>Née de la rencontre avec un tableau de Bruegel et du souvenir des spectacles forains de la foire Saint-Romain à Rouen, La Tentation de saint Antoine résume la diablerie romantique, ses monstres, ses obsessions, ses ténèbres. «Œuvre de toute ma vie», disait Flaubert, elle est aussi « le cabinet secret de son esprit » selon Baudelaire qui voulait « surtout attirer l'attention du lecteur sur cette faculté souffrante, souterraine et révoltée, qui traverse toute l'œuvre, ce filon ténébreux qui illumine et qui sert de guide à travers ce carphanaüm pandémoniaque de la solitude. »</summary>
 			<mark>4</mark>
 		</book>
+		<book ref_author="AUG" xml:lang="fr">
+			<title>Confessions</title>
+			<publication>401</publication>
+			<summary>Les Confessions, composées au cours des années 397-400, ont été l’un des livres de chevet de l’Occident. Autobiographie lyrique - la première d’une telle ampleur et d’un tel éclat - elles orchestrent une symphonie de thèmes dont les siècles successifs n’ont cessé de s’enchanter : l’inquiétude constitutive de l’homme, le poids de l’enfance, les orages de l’adolescence, la pression du passé sur le présent, la chaîne des habitudes, le vague des passions, les séductions des amitiés et des amours, les prestiges du théâtre, la présence originaire du mal, les profondeurs de la mémoire, le mystère du temps, l’errance spirituelle et la proximité de Dieu.La traduction d’Arnauld d’Andilly (1649-1671) est un monument du français classique.</summary>
+			<mark>4</mark>
+		</book>
 		<book ref_author="HUG" xml:lang="fr">
 			<title>Quatrevingt-treize</title>
 			<publication>1874</publication>
@@ -68,6 +74,12 @@
 			<firstName>William</firstName>
 			<birth place="Stratford-upon-Avon">1564</birth>
 			<death place="Stratford-upon-Avon">1616-04-23</death>
+		</author>
+		<author id_author="AUG">
+			<lastName>d’Hippone</lastName>
+			<firstName>Augustin</firstName>
+			<birth place="Thagaste">354-11-13</birth>
+			<death place="Hippone">430-08-28</death>
 		</author>
 		<author id_author="BOR">
 			<lastName>Borges</lastName>

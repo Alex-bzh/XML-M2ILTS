@@ -1,0 +1,717 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tmx>
+	<header
+		creationtool="oxygen"
+		creationtoolversion="17"
+		segtype="block"
+		o-tmf="txt"
+		adminlang="fr"
+		srclang="en"
+		datatype="plaintext"/>
+	<body>
+		<tu tuid="s1">
+			<tuv xml:lang="en">
+				<seg>The wind was a torrent of darkness among the gusty trees</seg>
+			</tuv>
+			<tuv xml:lang="fr">
+				<seg>Le vent d&#233;versait l'obscurit&#233; entre les arbres agit&#233;s</seg>
+			</tuv>
+		</tu>
+		<tu tuid="s2">
+			<tuv xml:lang="en">
+				<seg>The moon was a ghostly galleon tossed upon the cloudy seas</seg>
+			</tuv>
+			<tuv xml:lang="fr">
+				<seg>La lune &#233;tait un gallion fant&#244;me Jet&#233; sur une mer de nuages</seg>
+			</tuv>
+		</tu>
+		<tu tuid="s3">
+			<tuv xml:lang="en">
+				<seg>The road was a ribbon of moonlight over the purple moor</seg>
+			</tuv>
+			<tuv xml:lang="fr">
+				<seg>La route &#233;tait un ruban de lune sur la colline pourpre</seg>
+			</tuv>
+		</tu>
+		<tu tuid="s4">
+			<tuv xml:lang="en">
+				<seg>And the highwayman came riding,</seg>
+			</tuv>
+			<tuv xml:lang="fr">
+				<seg>Et le vagabond chevauchait,</seg>
+			</tuv>
+		</tu>
+		<tu tuid="s5">
+			<tuv xml:lang="en">
+				<seg>Riding, riding,</seg>
+			</tuv>
+			<tuv xml:lang="fr">
+				<seg>Chevauchait,</seg>
+			</tuv>
+		</tu>
+		<tu tuid="s6">
+			<tuv xml:lang="en">
+				<seg>The highwayman came riding, up to the old inn-door.</seg>
+			</tuv>
+			<tuv xml:lang="fr">
+				<seg>Le vagabond chevauchait, jusqu'&#224; la vieille auberge.</seg>
+			</tuv>
+		</tu>
+		<tu tuid="s7">
+			<tuv xml:lang="en">
+				<seg>He'd a French cocked hat on his forehead, a bunch of lace at his chin,</seg>
+			</tuv>
+			<tuv xml:lang="fr">
+				<seg>Il portait un chapeau &#224; la fran&#231;aise, lacet nou&#233; sous le menton,</seg>
+			</tuv>
+		</tu>
+		<tu tuid="s8">
+			<tuv xml:lang="en">
+				<seg>A coat of claret velvet, and breeches of brown doe-skin;</seg>
+			</tuv>
+			<tuv xml:lang="fr">
+				<seg>Un manteau de velours bordeaux, et des culottes de peau brune ;</seg>
+			</tuv>
+		</tu>
+		<tu tuid="s9">
+			<tuv xml:lang="en">
+				<seg>They fitted with never a wrinkle; his boots were up to the thigh!</seg>
+			</tuv>
+			<tuv xml:lang="fr">
+				<seg>Et elles ne faisaient jamais de plis ; ses bottes montaient jusqu'&#224; mi-cuisse !</seg>
+			</tuv>
+		</tu>
+		<tu tuid="s10">
+			<tuv xml:lang="en">
+				<seg>And he rode with a jewelled twinkle,</seg>
+			</tuv>
+			<tuv xml:lang="fr">
+				<seg>Et il allait avec un joyau scintillant,</seg>
+			</tuv>
+		</tu>
+		<tu tuid="s11">
+			<tuv xml:lang="en">
+				<seg>His pistol butts a-twinkle,</seg>
+			</tuv>
+			<tuv xml:lang="fr">
+				<seg>La crosse de son pistolet, scintillante,</seg>
+			</tuv>
+		</tu>
+		<tu tuid="s12">
+			<tuv xml:lang="en">
+				<seg>His rapier hilt a-twinkle, under the jewelled sky.</seg>
+			</tuv>
+			<tuv xml:lang="fr">
+				<seg>Sa rapi&#232;re, scintillante, sous le ciel de joyaux.</seg>
+			</tuv>
+		</tu>
+		<tu tuid="s13">
+			<tuv xml:lang="en">
+				<seg>Over the cobbles he clattered and clashed in the dark innyard,</seg>
+			</tuv>
+			<tuv xml:lang="fr">
+				<seg>Ses pas r&#233;sonn&#232;rent sur les pav&#233;s de la cour de l'auberge</seg>
+			</tuv>
+		</tu>
+		<tu tuid="s14">
+			<tuv xml:lang="en">
+				<seg>And he tapped with his whip on the shutters, but all was locked and barred;</seg>
+			</tuv>
+			<tuv xml:lang="fr">
+				<seg>Et il cogna aux volets avec son arme, mais tout &#233;tait ferm&#233; et verrouill&#233; ;</seg>
+			</tuv>
+		</tu>
+		<tu tuid="s15">
+			<tuv xml:lang="en">
+				<seg>He whistled a tune to the window, and who should be waiting there</seg>
+			</tuv>
+			<tuv xml:lang="fr">
+				<seg>Il siffla une note sous la fen&#234;tre, pour celle qui devait attendre l&#224;</seg>
+			</tuv>
+		</tu>
+		<tu tuid="s16">
+			<tuv xml:lang="en">
+				<seg>But the landlord's black-eyed daughter,</seg>
+			</tuv>
+			<tuv xml:lang="fr">
+				<seg>Juste la fille de l'aubergiste,</seg>
+			</tuv>
+		</tu>
+		<tu tuid="s17">
+			<tuv xml:lang="en">
+				<seg>Bess, the landlord's daughter,</seg>
+			</tuv>
+			<tuv xml:lang="fr">
+				<seg>La jolie Bess aux yeux noirs,</seg>
+			</tuv>
+		</tu>
+		<tu tuid="s18">
+			<tuv xml:lang="en">
+				<seg>Plaiting a dark red love-knot into her long black hair.</seg>
+			</tuv>
+			<tuv xml:lang="fr">
+				<seg>Qui tressait &#224; ses longs cheveux noirs un ruban rouge comme l'amour.</seg>
+			</tuv>
+		</tu>
+		<tu tuid="s19">
+			<tuv xml:lang="en">
+				<seg>"One kiss, my bonny sweetheart, I'm after a prize tonight,</seg>
+			</tuv>
+			<tuv xml:lang="fr">
+				<seg>"Un baiser, cher amour de mon coeur, ils sont apr&#232;s moi cette nuit,</seg>
+			</tuv>
+		</tu>
+		<tu tuid="s20">
+			<tuv xml:lang="en">
+				<seg>But I shall be back with the yellow gold before the morning light;</seg>
+			</tuv>
+			<tuv xml:lang="fr">
+				<seg>Mais Je reviendrai avec de l'or brillant avant l'aurore ;</seg>
+			</tuv>
+		</tu>
+		<tu tuid="s21">
+			<tuv xml:lang="en">
+				<seg>Yet if they press me sharply, and harry me through the day,</seg>
+			</tuv>
+			<tuv xml:lang="fr">
+				<seg>Sauf s'ils me serrent brusquement, et me poursuivent tout le jour,</seg>
+			</tuv>
+		</tu>
+		<tu tuid="s22">
+			<tuv xml:lang="en">
+				<seg>Then look for me by the moonlight,</seg>
+			</tuv>
+			<tuv xml:lang="fr">
+				<seg>Lors cherchez-moi au clair de lune,</seg>
+			</tuv>
+		</tu>
+		<tu tuid="s23">
+			<tuv xml:lang="en">
+				<seg>Watch for me by the moonlight,</seg>
+			</tuv>
+			<tuv xml:lang="fr">
+				<seg>Guettez-moi sous le clair de lune,</seg>
+			</tuv>
+		</tu>
+		<tu tuid="s24">
+			<tuv xml:lang="en">
+				<seg>I'll come to thee by the moonlight, though hell should bar the way."</seg>
+			</tuv>
+			<tuv xml:lang="fr">
+				<seg>Je viendrais &#224; vous au clair de lune, quand bien m&#234;me l'enfer me couperait la route."</seg>
+			</tuv>
+		</tu>
+		<tu tuid="s25">
+			<tuv xml:lang="en">
+				<seg>He rose upright in the stirrups; he scarce could reach her hand</seg>
+			</tuv>
+			<tuv xml:lang="fr">
+				<seg>Il se leva sur ses &#233;triers ; il pouvait ainsi lui effleurer la main</seg>
+			</tuv>
+		</tu>
+		<tu tuid="s26">
+			<tuv xml:lang="en">
+				<seg>But she loosened her hair i' the casement! His face burnt like a brand</seg>
+			</tuv>
+			<tuv xml:lang="fr">
+				<seg>Mais elle laissa ses cheveux pendre par la crois&#233;e ! Son visage en fut br&#251;l&#233;</seg>
+			</tuv>
+		</tu>
+		<tu tuid="s27">
+			<tuv xml:lang="en">
+				<seg>As the black cascade of perfume came tumbling over his breast;</seg>
+			</tuv>
+			<tuv xml:lang="fr">
+				<seg>Lorsque la noire cascade de parfum se r&#233;pandit sur lui ;</seg>
+			</tuv>
+		</tu>
+		<tu tuid="s28">
+			<tuv xml:lang="en">
+				<seg>And he kissed its waves in the moonlight,</seg>
+			</tuv>
+			<tuv xml:lang="fr">
+				<seg>Et il embrassa les boucles au clair de lune,</seg>
+			</tuv>
+		</tu>
+		<tu tuid="s29">
+			<tuv xml:lang="en">
+				<seg>(Oh, sweet black waves in the moonlight!)</seg>
+			</tuv>
+			<tuv xml:lang="fr">
+				<seg>(Ohh, douces boucles au clair de lune !)</seg>
+			</tuv>
+		</tu>
+		<tu tuid="s30">
+			<tuv xml:lang="en">
+				<seg>Then he tugged at his rein in the moonlight, and galloped away to the west.</seg>
+			</tuv>
+			<tuv xml:lang="fr">
+				<seg>Puis il fit claquer les r&#234;nes, et au clair de lune galopa loin vers l'est.</seg>
+			</tuv>
+		</tu>
+		<tu tuid="s31">
+			<tuv xml:lang="en">
+				<seg>He did not come at the dawning; he did not come at noon,</seg>
+			</tuv>
+			<tuv xml:lang="fr">
+				<seg>Il ne vint pas &#224; l'aube ; il ne vint pas &#224; midi,</seg>
+			</tuv>
+		</tu>
+		<tu tuid="s32">
+			<tuv xml:lang="en">
+				<seg>And out of the tawny sunset, before the rise o' the moon,</seg>
+			</tuv>
+			<tuv xml:lang="fr">
+				<seg>Et apr&#232;s le cr&#233;puscule fauve, avant que la lune ne se l&#232;ve,</seg>
+			</tuv>
+		</tu>
+		<tu tuid="s33">
+			<tuv xml:lang="en">
+				<seg>When the road was a gypsy's ribbon, looping the purple moor,</seg>
+			</tuv>
+			<tuv xml:lang="fr">
+				<seg>Alors que la lune &#233;tait un ruban de gitane, serpentant entre les colline pourpres,</seg>
+			</tuv>
+		</tu>
+		<tu tuid="s34">
+			<tuv xml:lang="en">
+				<seg>A red-coat troop came marching,</seg>
+			</tuv>
+			<tuv xml:lang="fr">
+				<seg>Une troupe de manteaux rouges vint marchant,</seg>
+			</tuv>
+		</tu>
+		<tu tuid="s35">
+			<tuv xml:lang="en">
+				<seg>Marching, marching</seg>
+			</tuv>
+			<tuv xml:lang="fr">
+				<seg>Marchant, marchant</seg>
+			</tuv>
+		</tu>
+		<tu tuid="s36">
+			<tuv xml:lang="en">
+				<seg>King George's men came marching, up to the old inn-door.</seg>
+			</tuv>
+			<tuv xml:lang="fr">
+				<seg>Les hommes du Roi George vinrent marchant, jusqu'&#224; la vieille auberge.</seg>
+			</tuv>
+		</tu>
+		<tu tuid="s37">
+			<tuv xml:lang="en">
+				<seg>They said no word to the landlord, they drank his ale instead,</seg>
+			</tuv>
+			<tuv xml:lang="fr">
+				<seg>Ils ne dirent mot &#224; l'aubergiste, &#224; la place ils burent toute sa bi&#232;re,</seg>
+			</tuv>
+		</tu>
+		<tu tuid="s38">
+			<tuv xml:lang="en">
+				<seg>But they gagged his daughter and bound her to the foot of her narrow bed;</seg>
+			</tuv>
+			<tuv xml:lang="fr">
+				<seg>Mais ils baillon&#232;rent sa fille et l'attach&#232;rent au pied de son lit &#233;troit ;</seg>
+			</tuv>
+		</tu>
+		<tu tuid="s39">
+			<tuv xml:lang="en">
+				<seg>Two of them knelt at the casement, with muskets at their side!</seg>
+			</tuv>
+			<tuv xml:lang="fr">
+				<seg>Deux d'entre eux se post&#232;rent aux crois&#233;es, mousquets au c&#244;t&#233; !</seg>
+			</tuv>
+		</tu>
+		<tu tuid="s40">
+			<tuv xml:lang="en">
+				<seg>There was death at every window</seg>
+			</tuv>
+			<tuv xml:lang="fr">
+				<seg>Il y avait la mort &#224; chaque fen&#234;tre,</seg>
+			</tuv>
+		</tu>
+		<tu tuid="s41">
+			<tuv xml:lang="en">
+				<seg>And hell at one dark window;</seg>
+			</tuv>
+			<tuv xml:lang="fr">
+				<seg>Et l'enfer &#224; l'une sombre fen&#234;tre ;</seg>
+			</tuv>
+		</tu>
+		<tu tuid="s42">
+			<tuv xml:lang="en">
+				<seg>For Bess could see, through the casement,</seg>
+			</tuv>
+			<tuv xml:lang="fr">
+				<seg>Pour Bess qui pouvait voir, &#224; travers la crois&#233;e,</seg>
+			</tuv>
+		</tu>
+		<tu tuid="s43">
+			<tuv xml:lang="en">
+				<seg>The road that he would ride.</seg>
+			</tuv>
+			<tuv xml:lang="fr">
+				<seg>Le chemin qu'il prendrait.</seg>
+			</tuv>
+		</tu>
+		<tu tuid="s44">
+			<tuv xml:lang="en">
+				<seg>They had tied her up to attention, with many a sniggering jest;</seg>
+			</tuv>
+			<tuv xml:lang="fr">
+				<seg>Ils avaient capt&#233; son attention, avec des plaisanteries moqueuses ;</seg>
+			</tuv>
+		</tu>
+		<tu tuid="s45">
+			<tuv xml:lang="en">
+				<seg>They had bound a musket beside her, with the barrel beneath her breast!</seg>
+			</tuv>
+			<tuv xml:lang="fr">
+				<seg>Ils avaient attach&#233; un mosquet derri&#232;re elle, le barillet sous son sein !</seg>
+			</tuv>
+		</tu>
+		<tu tuid="s46">
+			<tuv xml:lang="en">
+				<seg>"Now keep good watch!" And they kissed her.</seg>
+			</tuv>
+			<tuv xml:lang="fr">
+				<seg>"A pr&#233;sent regarde bien !" Et ils l'embrass&#232;rent.</seg>
+			</tuv>
+		</tu>
+		<tu tuid="s47">
+			<tuv xml:lang="en">
+				<seg>She heard the dead man say</seg>
+			</tuv>
+			<tuv xml:lang="fr">
+				<seg>Elle entendit l'homme mort dire</seg>
+			</tuv>
+		</tu>
+		<tu tuid="s48">
+			<tuv xml:lang="en">
+				<seg>"Look for me by the moonlight</seg>
+			</tuv>
+			<tuv xml:lang="fr">
+				<seg>"Cherchez-moi au clair de lune</seg>
+			</tuv>
+		</tu>
+		<tu tuid="s49">
+			<tuv xml:lang="en">
+				<seg>Watch for me by the moonlight</seg>
+			</tuv>
+			<tuv xml:lang="fr">
+				<seg>Guettez-moi au clair de lune</seg>
+			</tuv>
+		</tu>
+		<tu tuid="s50">
+			<tuv xml:lang="en">
+				<seg>I'll come to thee by the moonlight, though hell should bar the way!</seg>
+			</tuv>
+			<tuv xml:lang="fr">
+				<seg>Je viendrais &#224; vous au clair de lune, quand bien m&#234;me l'enfer me couperait la route !"</seg>
+			</tuv>
+		</tu>
+		<tu tuid="s51">
+			<tuv xml:lang="en">
+				<seg>She twisted her hands behind her, but all the knots held good!</seg>
+			</tuv>
+			<tuv xml:lang="fr">
+				<seg>Elle tordait ses mains derri&#232;re elle, mais tous les noeuds tenaient bon !</seg>
+			</tuv>
+		</tu>
+		<tu tuid="s52">
+			<tuv xml:lang="en">
+				<seg>She writhed her hands till her fingers were wet with sweat or blood!</seg>
+			</tuv>
+			<tuv xml:lang="fr">
+				<seg>Elle tenta de les d&#233;gager, jusqu'&#224; ce que ses doigts soient tremp&#233;s de sueur et de sang !</seg>
+			</tuv>
+		</tu>
+		<tu tuid="s53">
+			<tuv xml:lang="en">
+				<seg>They stretched and strained in the darkness and the hours crawled by like years!</seg>
+			</tuv>
+			<tuv xml:lang="fr">
+				<seg>Ils s'&#233;tendirent l&#224;, attentifs dans l'obscurit&#233; et les heures semblaient durer des ann&#233;es !</seg>
+			</tuv>
+		</tu>
+		<tu tuid="s54">
+			<tuv xml:lang="en">
+				<seg>Till, now, on the stroke of midnight</seg>
+			</tuv>
+			<tuv xml:lang="fr">
+				<seg>Ainsi, jusqu'au coup de minuit,</seg>
+			</tuv>
+		</tu>
+		<tu tuid="s55">
+			<tuv xml:lang="en">
+				<seg>Cold, on the stroke of midnight,</seg>
+			</tuv>
+			<tuv xml:lang="fr">
+				<seg>Froid, sur le coup de minuit,</seg>
+			</tuv>
+		</tu>
+		<tu tuid="s56">
+			<tuv xml:lang="en">
+				<seg>The tip of one finger touched it!</seg>
+			</tuv>
+			<tuv xml:lang="fr">
+				<seg>Elle la toucha du bout du doigt !</seg>
+			</tuv>
+		</tu>
+		<tu tuid="s57">
+			<tuv xml:lang="en">
+				<seg>The trigger at least was hers!</seg>
+			</tuv>
+			<tuv xml:lang="fr">
+				<seg>La g&#226;chette &#233;tait enfin sienne !</seg>
+			</tuv>
+		</tu>
+		<tu tuid="s58">
+			<tuv xml:lang="en">
+				<seg>Tlot-tlot! Had they heard it? The horse-hoofs were ringing clear</seg>
+			</tuv>
+			<tuv xml:lang="fr">
+				<seg>Clop-clop ! L'avaient-ils entendu ? Les sabots claquaient clairement</seg>
+			</tuv>
+		</tu>
+		<tu tuid="s59">
+			<tuv xml:lang="en">
+				<seg>Tlot-tlot, in the distance! Were they deaf that they did not hear?</seg>
+			</tuv>
+			<tuv xml:lang="fr">
+				<seg>Clop-clop au loin ! Etaient-ils sourds pour ne pas entendre ?</seg>
+			</tuv>
+		</tu>
+		<tu tuid="s60">
+			<tuv xml:lang="en">
+				<seg>Down the ribbon of moonlight, over the brow of the hill,</seg>
+			</tuv>
+			<tuv xml:lang="fr">
+				<seg>Au bas du ruban de lune et au sommet de la colline,</seg>
+			</tuv>
+		</tu>
+		<tu tuid="s61">
+			<tuv xml:lang="en">
+				<seg>The highwayman came riding</seg>
+			</tuv>
+			<tuv xml:lang="fr">
+				<seg>Le vagabond chevauchait,</seg>
+			</tuv>
+		</tu>
+		<tu tuid="s62">
+			<tuv xml:lang="en">
+				<seg>Riding, riding!</seg>
+			</tuv>
+			<tuv xml:lang="fr">
+				<seg>Chevauchait, chevauchait !</seg>
+			</tuv>
+		</tu>
+		<tu tuid="s63">
+			<tuv xml:lang="en">
+				<seg>The red-coats looked to their priming!</seg>
+			</tuv>
+			<tuv xml:lang="fr">
+				<seg>Les manteaux rouges voyaient leur r&#233;compense !</seg>
+			</tuv>
+		</tu>
+		<tu tuid="s64">
+			<tuv xml:lang="en">
+				<seg>She stood up straight and still!</seg>
+			</tuv>
+			<tuv xml:lang="fr">
+				<seg>Elle se redressa et resta ainsi !</seg>
+			</tuv>
+		</tu>
+		<tu tuid="s65">
+			<tuv xml:lang="en">
+				<seg>Tlot in the frosty silence! Tlot, in the echoing night!</seg>
+			</tuv>
+			<tuv xml:lang="fr">
+				<seg>Clop dans le silence glacial ! Clop, dans la nuit r&#233;sonnante !</seg>
+			</tuv>
+		</tu>
+		<tu tuid="s66">
+			<tuv xml:lang="en">
+				<seg>Nearer he came and nearer! Her face was like a light!</seg>
+			</tuv>
+			<tuv xml:lang="fr">
+				<seg>Plus pr&#232;s il venait, plus pr&#232;s ! Son visage &#233;tait lumineux !</seg>
+			</tuv>
+		</tu>
+		<tu tuid="s67">
+			<tuv xml:lang="en">
+				<seg>Her eyes grew wide for a moment! She drew one last deep breath</seg>
+			</tuv>
+			<tuv xml:lang="fr">
+				<seg>Ses yeux s'agrandirent un moment ! Elle prit sa derni&#232;re bouff&#233;e d'air,</seg>
+			</tuv>
+		</tu>
+		<tu tuid="s68">
+			<tuv xml:lang="en">
+				<seg>Then her finger moved in the moonlight,</seg>
+			</tuv>
+			<tuv xml:lang="fr">
+				<seg>Puis son doigt bougea au clair de lune,</seg>
+			</tuv>
+		</tu>
+		<tu tuid="s69">
+			<tuv xml:lang="en">
+				<seg>Her musket shattered the moonlight,</seg>
+			</tuv>
+			<tuv xml:lang="fr">
+				<seg>Le mousquet transper&#231;a le clair de lune,</seg>
+			</tuv>
+		</tu>
+		<tu tuid="s70">
+			<tuv xml:lang="en">
+				<seg>Shattered her breast in the moonlight and warned him with her death.</seg>
+			</tuv>
+			<tuv xml:lang="fr">
+				<seg>Traversa sa poitrine au clair de lune, et l'avertit de sa mort.</seg>
+			</tuv>
+		</tu>
+		<tu tuid="s71">
+			<tuv xml:lang="en">
+				<seg>He turned; he spurred to the west; he did not know she stood</seg>
+			</tuv>
+			<tuv xml:lang="fr">
+				<seg>Il fit volte-face, &#224; toute allure vers l'est ; il ne savait pas qu'elle restait</seg>
+			</tuv>
+		</tu>
+		<tu tuid="s72">
+			<tuv xml:lang="en">
+				<seg>Bowed, with her head o'er the musket, drenched with her own red blood!</seg>
+			</tuv>
+			<tuv xml:lang="fr">
+				<seg>Attach&#233;e, avec la t&#234;te au dessus de l'arme, imbib&#233;e de son sang &#233;carlate !</seg>
+			</tuv>
+		</tu>
+		<tu tuid="s73">
+			<tuv xml:lang="en">
+				<seg>Not till the dawn he heard it; his face grew grey to hear</seg>
+			</tuv>
+			<tuv xml:lang="fr">
+				<seg>Il ne sut rien avant l'aurore ; son visage devint gris quand il apprit</seg>
+			</tuv>
+		</tu>
+		<tu tuid="s74">
+			<tuv xml:lang="en">
+				<seg>How Bess, the landlord's daughter,</seg>
+			</tuv>
+			<tuv xml:lang="fr">
+				<seg>Comment Bess, la fille de l'aubergiste,</seg>
+			</tuv>
+		</tu>
+		<tu tuid="s75">
+			<tuv xml:lang="en">
+				<seg>The landlord's black-eyed daughter,</seg>
+			</tuv>
+			<tuv xml:lang="fr">
+				<seg>La fille de l'aubergiste aux yeux noirs,</seg>
+			</tuv>
+		</tu>
+		<tu tuid="s76">
+			<tuv xml:lang="en">
+				<seg>Had watched for her love in the moonlight, and died in the darkness there.</seg>
+			</tuv>
+			<tuv xml:lang="fr">
+				<seg>Avait cherch&#233; son amour au clair de lune, et &#233;tait morte dans les t&#233;n&#232;bres.</seg>
+			</tuv>
+		</tu>
+		<tu tuid="s77">
+			<tuv xml:lang="en">
+				<seg>Back, he spurred like a madman, shrieking a curse to the sky</seg>
+			</tuv>
+			<tuv xml:lang="fr">
+				<seg>Au retour, il &#233;peronnait comme un fou, maudissant le ciel</seg>
+			</tuv>
+		</tu>
+		<tu tuid="s78">
+			<tuv xml:lang="en">
+				<seg>With the white road smoking behind him and his rapier brandished high!</seg>
+			</tuv>
+			<tuv xml:lang="fr">
+				<seg>Sur la route blanche qui fumait derri&#232;re lui, il brandissait haut sa rapi&#232;re !</seg>
+			</tuv>
+		</tu>
+		<tu tuid="s79">
+			<tuv xml:lang="en">
+				<seg>Blood-red were the spurs i' the golden noon; wine-red was his velvet coat,</seg>
+			</tuv>
+			<tuv xml:lang="fr">
+				<seg>Les &#233;perons &#233;taient rouges de sang sous le soleil dor&#233; de midi, rouges comme son manteau de velours,</seg>
+			</tuv>
+		</tu>
+		<tu tuid="s80">
+			<tuv xml:lang="en">
+				<seg>When they shot him down on the highway,</seg>
+			</tuv>
+			<tuv xml:lang="fr">
+				<seg>Quand ils l'abattirent sur le chemin,</seg>
+			</tuv>
+		</tu>
+		<tu tuid="s81">
+			<tuv xml:lang="en">
+				<seg>Down like a dog on the highway,</seg>
+			</tuv>
+			<tuv xml:lang="fr">
+				<seg>Sur le chemin comme un chien,</seg>
+			</tuv>
+		</tu>
+		<tu tuid="s82">
+			<tuv xml:lang="en">
+				<seg>And he lay in his blood on the highway, with the bunch of lace at his throat.</seg>
+			</tuv>
+			<tuv xml:lang="fr">
+				<seg>Et il baigna dans son sang sur le chemin, son chapeau nou&#233; sous le menton.</seg>
+			</tuv>
+		</tu>
+		<tu tuid="s83">
+			<tuv xml:lang="en">
+				<seg>Still of a winter's night, they say, when the wind is in the trees,</seg>
+			</tuv>
+			<tuv xml:lang="fr">
+				<seg>On dit depuis, que les nuits d'hiver o&#249; le vent fait hurler les arbres</seg>
+			</tuv>
+		</tu>
+		<tu tuid="s84">
+			<tuv xml:lang="en">
+				<seg>When the moon is a ghostly galleon, tossed upon the cloudy seas,</seg>
+			</tuv>
+			<tuv xml:lang="fr">
+				<seg>Quand la lune est un gallion fant&#244;me, Jet&#233; sur une mer de nuages,</seg>
+			</tuv>
+		</tu>
+		<tu tuid="s85">
+			<tuv xml:lang="en">
+				<seg>When the road is a ribbon of moonlight over the purple moor,</seg>
+			</tuv>
+			<tuv xml:lang="fr">
+				<seg>Quand la route est un ruban de lune sur la colline pourpre,</seg>
+			</tuv>
+		</tu>
+		<tu tuid="s86">
+			<tuv xml:lang="en">
+				<seg>A highwayman comes riding,</seg>
+			</tuv>
+			<tuv xml:lang="fr">
+				<seg>Un vagabond chevauche,</seg>
+			</tuv>
+		</tu>
+		<tu tuid="s87">
+			<tuv xml:lang="en">
+				<seg>Riding, riding,</seg>
+			</tuv>
+			<tuv xml:lang="fr">
+				<seg>Chevauche, chevauche,</seg>
+			</tuv>
+		</tu>
+		<tu tuid="s88">
+			<tuv xml:lang="en">
+				<seg>A highwayman comes riding, up to the old inn-door</seg>
+			</tuv>
+			<tuv xml:lang="fr">
+				<seg>Le vagabond chevauche, jusqu'&#224; la vieille auberge.</seg>
+			</tuv>
+		</tu>
+	</body>
+</tmx>
