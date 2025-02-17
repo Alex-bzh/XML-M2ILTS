@@ -1,0 +1,28 @@
+<!-- ELEMENTS -->
+
+<!ELEMENT bbt (meta, cast, characters) >
+
+<!ELEMENT meta (title, summary+) >
+	<!ELEMENT title (#PCDATA) >
+	<!ELEMENT summary (#PCDATA) >
+
+<!ELEMENT cast (actor+)>
+	<!ELEMENT actor (firstName, lastName) >
+		<!ELEMENT firstName (#PCDATA)>
+		<!ELEMENT lastName (#PCDATA)>
+
+<!ELEMENT characters (character+) >
+	<!ELEMENT character (firstName, lastName?) >
+
+<!-- ATTRIBUTES -->
+
+<!ATTLIST summary
+	xml:lang ID #REQUIRED>
+
+<!ATTLIST actor
+	ref (rajesh | leonard | howard | amy | penny | sheldon | bernadette) #REQUIRED
+	birthday CDATA #REQUIRED
+	age CDATA #IMPLIED>
+
+<!ATTLIST character
+	id ID #REQUIRED>
