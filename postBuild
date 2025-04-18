@@ -4,19 +4,6 @@
 mkdir -p ~/lib && cd ~/lib
 
 #
-# saxon-lint
-#
-git clone https://github.com/sputnick-dev/saxon-lint.git
-cd saxon-lint*
-chmod +x saxon-lint.pl
-
-# add saxon-lint.pl to PATH variable
-echo "PATH=$PATH:~/lib/saxon-lint" >> ~/.bashrc
-
-# make an alias
-echo "alias saxon-lint='saxon-lint.pl'" >> ~/.bashrc
-
-#
 # Tikal
 #
 cd ~/lib
@@ -26,11 +13,20 @@ rm okapi-apps_gtk2-linux-x86_64_1.47.0.zip
 cd ./okapi
 chmod +x tikal.sh
 
-# add okapi to PATH variable
-echo "PATH=$PATH:~/lib/okapi" >> ~/.bashrc
+#
+# saxon-lint
+#
+cd ~/lib
+git clone https://github.com/sputnick-dev/saxon-lint.git
+cd saxon-lint*
+chmod +x saxon-lint.pl
 
-# make an alias
-echo "alias tikal='tikal.sh'" >> ~/.bashrc
+# add saxon-lint.pl and okapi to PATH variable
+echo "PATH=\$PATH:~/lib/saxon-lint:~/lib/okapi" >> ~/.bashrc
+
+# make aliases
+echo "alias saxon-lint='saxon-lint.pl'" >> ~/.bashrc
+echo "alias tikal='~/lib/okapi/tikal.sh'" >> ~/.bashrc
 
 # validation
 source ~/.bashrc
